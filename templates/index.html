@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loan Approval</title>
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="{{ url_for('predict') }}"method="post">
+				<span class="contact100-form-title">
+					CHECK YOUR LOAN APPROVAL CHANCE
+				</span>
+                           
+                 
+				<div class="wrap-input100 validate-input" data-validate = "gender is required : male,female">
+					<label for="gender">Gender: Type 0 for female and 1 for male</label><br>
+					<input class="input100" id="gender" type="text" name="gender" placeholder="Gender">
+					<label class="label-input100" for="gender">
+						<span class="lnr lnr-user"></span>
+					</label>
+				</div>
+				
+				<div class="wrap-input100 validate-input" data-validate = "marital status is required">
+					<label for="married">Married: Type 0 for No and 1 for Yes</label><br>
+					<input class="input100" id="married" type="text" name="married" placeholder="Married">
+					<label class="label-input100" for="married">
+						<span class="lnr lnr-user"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Dependents is required">
+								<label for="dependents">Dependents: 0,1,2,3</label><br>
+					<input class="input100" id="dependents" type="text" name="dependents" placeholder="Dependents">
+					<label class="label-input100" for="dependents">
+						<span class="lnr lnr-keyboard"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Education is required">
+								<label for="education">Education: Type 0 for Graduate and 1 for Not Graduate</label><br>
+					<input class="input100" id="Education" type="text" name="Education" placeholder="Education">
+					<label class="label-input100" for="Education">
+						<span class="lnr lnr-graduation-hat"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Self-Employed is required">
+								<label for="self-Employed">Self_Employed: Type 0 for No and 1 for Yes</label><br>
+					<input class="input100" id="Self-Employed" type="text" name="Self-Employed" placeholder="Self-Employed">
+					<label class="label-input100" for="Self-Employed">
+						<span class="lnr lnr-apartment"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Applicant-income is required">
+								<label for="Applicant-income">Applicant_Income</label><br>
+					<input class="input100" id="Applicant-income" type="text" name="Applicant-income" placeholder="Applicant-income">
+					<label class="label-input100" for="Applicant-income">
+						<span class="lnr lnr-briefcase"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "co-Applicant-income is required">
+								<label for="Coapplicant-income">Coapplicant_Income</label><br>
+					<input class="input100" id="co-Applicant-income" type="text" name="co-Applicant-income" placeholder="co-Applicant-income">
+					<label class="label-input100" for="co-Applicant-income">
+						<span class="lnr lnr-briefcase"></span>
+					</label>
+                            </div>
+                             <div class="wrap-input100 validate-input" data-validate = "Loan ammount is required">
+								<label for="Loan ammount">Loan Ammount</label><br>
+					<input class="input100" id="Loan_ammount" type="text" name="Loan ammount" placeholder="Loan ammount">
+					<label class="label-input100" for="Loan_ammount">
+						<span class="lnr lnr-briefcase"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Loan ammount term is required">
+								<label for="Loan ammount term">Loan Ammount Term</label><br>
+					<input class="input100" id="Loan_ammount_term" type="text" name="Loan ammount term" placeholder="Loan ammount term">
+					<label class="label-input100" for="Loan_ammount_term">
+						<span class="lnr lnr-leaf"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Credit history is required">
+								<label for="Credit history">Credit History: 0,1</label><br>
+					<input class="input100" id="Credit_history" type="text" name="Credit history" placeholder="Credit history: 0,1">
+					<label class="label-input100" for="Credit_history">
+						<span class="lnr lnr-license"></span>
+					</label>
+				</div>
+                            <div class="wrap-input100 validate-input" data-validate = "Property area is required">
+								<label for="Property area">Property Area: 0 for Rural, 1 for Semi_Urban, 2 for Urban</label><br>
+					<input class="input100" id="property_area" type="text" name="Property area" placeholder="Property area">
+					<label class="label-input100" for="Credit_history">
+						<span class="lnr lnr-database"></span>
+					</label>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							Predict
+						</button>
+					</div>
+				</div>
+			</form>
+			<br>
+			<br>
+			{{ prediction_text }}
+		</div>
+	</div>
+</body>
+</html>
