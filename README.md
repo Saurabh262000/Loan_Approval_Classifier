@@ -1,4 +1,4 @@
-# Loan Status Classifier
+# Loan Approval Classifier
 
 This website is used to check Loan Status, Whether you will be getting a loan or not.
 
